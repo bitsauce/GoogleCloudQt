@@ -23,14 +23,7 @@ win32:CONFIG(debug, debug|release):   QMAKE_CXXFLAGS_DEBUG += /MDd
 # Add some missing windows dependencies
 LIBS += -lws2_32 -ladvapi32
 
-# TODO
-# How to set up:
-#
-# Install google-cloud-cpp through vcpkg
-#
-# Define environment variable VCPKG_ROOT and
-# set it to the root directory of the vcpkg installation
-
+# Set vcpkg vars
 VCPKG_TRIPLET = x64-windows-v140
 win32:CONFIG(release, debug|release): VCPKG_LIBS_DIR = $$(VCPKG_ROOT)/installed/$${VCPKG_TRIPLET}/lib
 win32:CONFIG(debug, debug|release):   VCPKG_LIBS_DIR = $$(VCPKG_ROOT)/installed/$${VCPKG_TRIPLET}/debug/lib
