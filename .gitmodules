@@ -1,0 +1,3 @@
+[submodule "third_party/firestore"]
+	path = third_party/firestore
+	url = https://github.com/bitsauce/lightweight-firestore-cpp
